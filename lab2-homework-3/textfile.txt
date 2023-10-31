@@ -1,0 +1,4 @@
+if (var1 == var2){
+	printf("hello"); //print hello
+	return 0; //said return
+}
