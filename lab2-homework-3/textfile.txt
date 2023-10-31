@@ -1,4 +1,11 @@
 if (var1 == var2){
 	printf("hello"); //print hello
 	return 0; //said return
-}
+ }
+/* this is a new line
+a second line
+a third line */
+printf("the end"); // thee endd
+/* this is a new line
+a second line
+a third line */

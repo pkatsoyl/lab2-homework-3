@@ -355,8 +355,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 4
-#define YY_END_OF_BUFFER 5
+#define YY_NUM_RULES 7
+#define YY_END_OF_BUFFER 8
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -364,10 +364,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[15] =
+static const flex_int16_t yy_accept[26] =
     {   0,
-        0,    0,    2,    2,    5,    4,    4,    2,    3,    2,
-        1,    2,    1,    0
+        0,    0,    2,    2,    5,    5,    8,    7,    7,    2,
+        3,    2,    5,    5,    5,    4,    1,    2,    2,    1,
+        5,    5,    4,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -376,7 +377,7 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    3,    1,    1,    1,
+        1,    3,    1,    1,    1,    1,    4,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -402,33 +403,37 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[4] =
+static const YY_CHAR yy_meta[5] =
     {   0,
-        1,    2,    3
+        1,    2,    1,    1
     } ;
 
-static const flex_int16_t yy_base[18] =
+static const flex_int16_t yy_base[29] =
     {   0,
-       10,    9,    0,    0,   11,   14,    0,    0,   14,    7,
-       14,    0,    0,   14,    3,    5,    6
+       20,   19,    0,    0,    4,    0,   22,   25,    6,    0,
+       25,   10,    0,   17,   12,   25,   25,    0,    0,    0,
+        0,    0,    0,    0,   25,   16,   11,   18
     } ;
 
-static const flex_int16_t yy_def[18] =
+static const flex_int16_t yy_def[29] =
     {   0,
-       15,   15,   14,    3,   14,   14,   16,   17,   14,   17,
-       14,   17,   17,    0,   14,   14,   14
+       26,   26,   25,    3,   25,    5,   25,   25,   25,   27,
+       25,   25,   28,   28,   28,   25,   25,   27,   27,   27,
+       28,   28,   28,   28,    0,   25,   25,   25
     } ;
 
-static const flex_int16_t yy_nxt[18] =
+static const flex_int16_t yy_nxt[30] =
     {   0,
-        8,    9,   10,    6,    6,    6,   12,   11,   12,   13,
-       14,    7,    7,    5,   14,   14,   14
+       10,   11,   10,   12,   13,   13,   14,   15,   16,   17,
+       18,   18,   19,   20,   23,   24,    8,    8,   21,   21,
+       22,   25,    9,    9,    7,   25,   25,   25,   25
     } ;
 
-static const flex_int16_t yy_chk[18] =
+static const flex_int16_t yy_chk[30] =
     {   0,
-        3,    3,    3,   15,   15,   15,   17,   16,   17,   10,
-        5,    2,    1,   14,   14,   14,   14
+        3,    3,    3,    3,    5,    5,    5,    5,    9,    9,
+       12,   27,   12,   12,   15,   15,   26,   26,   28,   28,
+       14,    7,    2,    1,   25,   25,   25,   25,   25
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -447,10 +452,11 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "grammar.l"
 
-#line 450 "grammar.flex.cpp"
+#line 455 "grammar.flex.cpp"
 
 #define INITIAL 0
 #define SINGLELINECOMMENTS 1
+#define MULTIPLELINECOMMENTS 2
 
 /*windows compatibility case*/
 #include <io.h>
@@ -664,7 +670,7 @@ YY_DECL
 	{
 #line 3 "grammar.l"
 
-#line 667 "grammar.flex.cpp"
+#line 673 "grammar.flex.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -691,13 +697,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 15 )
+				if ( yy_current_state >= 26 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 14 );
+		while ( yy_base[yy_current_state] != 25 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -739,12 +745,29 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
+#line 8 "grammar.l"
+{ BEGIN (MULTIPLELINECOMMENTS) ;}
+	YY_BREAK
+case 5:
+/* rule 5 can match eol */
+YY_RULE_SETUP
 #line 9 "grammar.l"
+{ printf("i find it too\n"); } 
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 10 "grammar.l"
+{ BEGIN (INITIAL); } 
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 12 "grammar.l"
 ECHO;
 	YY_BREAK
-#line 745 "grammar.flex.cpp"
+#line 767 "grammar.flex.cpp"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(SINGLELINECOMMENTS):
+case YY_STATE_EOF(MULTIPLELINECOMMENTS):
 	yyterminate();
 
 	case YY_END_OF_BUFFER:
@@ -1040,7 +1063,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 15 )
+			if ( yy_current_state >= 26 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1068,11 +1091,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 15 )
+		if ( yy_current_state >= 26 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 14);
+	yy_is_jam = (yy_current_state == 25);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1748,7 +1771,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 9 "grammar.l"
+#line 12 "grammar.l"
 
 
 
