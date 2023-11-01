@@ -3,17 +3,15 @@
 %x MULTIPLELINECOMMENTS
 %%
 
-
 "\/\*" { BEGIN (MULTIPLELINECOMMENTS) ;}
-<MULTIPLELINECOMMENTS>[^*\n]* { printf("(multiple lines comments)\n"); } 
+<MULTIPLELINECOMMENTS>[^*\n]* { } 
 <MULTIPLELINECOMMENTS>"*"+[^*/\n]*
 <MULTIPLELINECOMMENTS>\n
 <MULTIPLELINECOMMENTS>"*"+"/" { BEGIN (INITIAL); } 
 
 "\/\/" { BEGIN (SINGLELINECOMMENTS) ;}
-<SINGLELINECOMMENTS>.* { printf("(single line comments)\n"); } 
+<SINGLELINECOMMENTS>.* { } 
 <SINGLELINECOMMENTS>\n { BEGIN (INITIAL); } 
-
 
 %%
 

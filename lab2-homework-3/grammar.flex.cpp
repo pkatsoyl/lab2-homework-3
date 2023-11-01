@@ -740,7 +740,7 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 8 "grammar.l"
-{ printf("(multiple lines comments)\n"); } 
+{ } 
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
@@ -766,7 +766,7 @@ YY_RULE_SETUP
 case 7:
 YY_RULE_SETUP
 #line 14 "grammar.l"
-{ printf("(single line comments)\n"); } 
+{ } 
 	YY_BREAK
 case 8:
 /* rule 8 can match eol */
