@@ -140,9 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="grammar.tab.h" />
+    <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="textfile.txt" />
+    <Text Include="textfile1.txt" />
+    <Text Include="textfile2.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

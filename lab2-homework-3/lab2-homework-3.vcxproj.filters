@@ -39,9 +39,15 @@
     <ClInclude Include="grammar.tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="textfile.txt">
+    <Text Include="textfile1.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="textfile2.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

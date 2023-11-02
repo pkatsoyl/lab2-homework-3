@@ -674,8 +674,7 @@ YY_DECL
 #line 4 "grammar.l"
 
 
-
-#line 678 "grammar.flex.cpp"
+#line 677 "grammar.flex.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -734,52 +733,52 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "grammar.l"
+#line 6 "grammar.l"
 { BEGIN (MULTIPLELINECOMMENTS) ;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "grammar.l"
+#line 7 "grammar.l"
 { } 
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 9 "grammar.l"
+#line 8 "grammar.l"
 
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 10 "grammar.l"
+#line 9 "grammar.l"
 
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 11 "grammar.l"
+#line 10 "grammar.l"
 { BEGIN (INITIAL); } 
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "grammar.l"
+#line 12 "grammar.l"
 { BEGIN (SINGLELINECOMMENTS) ;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 14 "grammar.l"
-{ } 
+#line 13 "grammar.l"
+{ fprintf_s(yyout, "\n"); } 
 	YY_BREAK
 case 8:
 /* rule 8 can match eol */
 YY_RULE_SETUP
-#line 15 "grammar.l"
+#line 14 "grammar.l"
 { BEGIN (INITIAL); } 
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 18 "grammar.l"
+#line 16 "grammar.l"
 ECHO;
 	YY_BREAK
-#line 782 "grammar.flex.cpp"
+#line 781 "grammar.flex.cpp"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(SINGLELINECOMMENTS):
 case YY_STATE_EOF(MULTIPLELINECOMMENTS):
@@ -1786,7 +1785,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 18 "grammar.l"
+#line 16 "grammar.l"
 
 
 

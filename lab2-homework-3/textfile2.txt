@@ -1,16 +1,16 @@
 /* this is a new line
 a second line
 a third line w */
-start programm
-if (var1 == var2){
-	printf("hello"); //print hello
+start programm2
+while (var3 != var4){
+	printf("second file"); //print something
 	return 0; //said return
  }
 /* this is a new line
 a second line
 a third line */
 
-printf("the end");
+printf("second file"); // print something
 
 /* this is a new line
 a second line

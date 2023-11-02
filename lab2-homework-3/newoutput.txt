@@ -1,7 +1,9 @@
 
 start programm
 if (var1 == var2){
-	printf("hello"); 	return 0;  }
+	printf("hello"); 
+	return 0; 
+ }
 
 
 printf("the end");
